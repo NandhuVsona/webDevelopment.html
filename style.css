@@ -1,0 +1,405 @@
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 30px;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+ 
+
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+
+}
+
+#hamburger {
+  width: 35px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+}
+
+#hamburger>span {
+  width: 100%;
+  background-color: black;
+  height: 100%;
+}
+
+#hamburger:hover #hamburger>span {
+  display: none;
+}
+
+#dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(248, 142, 4);
+  padding: 20px;
+  gap: 10px;
+  color: white !important;
+
+
+}
+
+#dropdown>li>a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+#dropdown>li {
+  width: 100%;
+  display: block;
+  text-align: center;
+
+}
+
+section {
+  transition: all .3s;
+  display: none;
+}
+
+.showmenu {
+  display: block;
+}
+
+.one,
+.three {
+
+  animation: dropdown .3s linear;
+}
+
+@keyframes dropdown {
+  0% {
+    transform: translateX(-250px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.two,
+.four {
+
+  animation: dropdown2 .3s linear;
+}
+
+@keyframes dropdown2 {
+  0% {
+    transform: translateX(250px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.five {
+
+  animation: dropdown3 .3s linear;
+}
+
+@keyframes dropdown3 {
+  0% {
+    transform: translateY(250px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  right: 65px;
+  width: 45px;
+  height: 30px;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.top,
+.bottom,
+.middle {
+  transition: all 0.3s linear;
+}
+
+input[type='checkbox']:checked~#hamburger .top {
+  transform-origin: left;
+  transform: rotate(40deg);
+}
+
+input[type='checkbox']:checked~#hamburger .bottom {
+  transform-origin: left;
+  transform: rotate(-40deg);
+}
+
+input[type='checkbox']:checked~#hamburger .middle {
+
+  transform: translateX(-1000px);
+}
+
+#partone {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  text-align: left !important;
+  font-size: 16px;
+  padding: 10px 10px 10px 40px;
+  gap: 20px;
+  animation: left .5s linear;
+}
+
+@keyframes left {
+  0% {
+    transform: translateX(-200px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes right {
+  0% {
+    transform: translateX(200px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  z-index: -100;
+
+}
+
+#name {
+  font-size: 70px;
+
+}
+
+#partone>h1+p {
+  font-size: 30;
+
+}
+
+#partone>h1+p+p {
+  font-size: 25px;
+  line-height: 40px;
+}
+
+img {
+  width: 100%;
+}
+
+#partwo {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  animation: right .3s linear;
+}
+
+#partwo>img {
+  width: 90%;
+  height: 90%;
+}
+
+article>h1>span {
+  font-size: 70px;
+  color: rgb(0, 0, 0);
+}
+
+#full {
+  font-size: 25px;
+  background-color: rgb(255, 255, 255);
+  padding: 2px 5px;
+  color: rgb(0, 0, 0);
+}
+
+#clickme {
+  width: 170px;
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+  outline: none;
+  margin-top: 30px;
+  border-radius: 5px;
+  font-size: 25px;
+  color: white;
+  transition: all .3s;
+}
+
+.ca {
+  display: flex;
+  justify-content: center;
+}
+
+#clickme:active {
+  width: 160px;
+  height: 45px;
+  font-size: 23px;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+}
+
+#bgvalue {
+  font-size: 20px;
+  right: 10px;
+  position: absolute;
+  bottom: -30px;
+  background-color: white;
+  padding: 5px 10px;
+}
+
+@media all and (max-width:640px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+    background-color: white;
+
+  }
+
+  #about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    text-align: left;
+    padding: 50px 10px 10px 10px;
+    z-index: -100;
+    margin-top: 50px;
+
+  }
+
+  #partwo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    animation: right .3s linear;
+  }
+
+  #partone {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center !important;
+    font-size: 16px;
+    padding: 10px;
+    gap: 20px;
+    animation: left .5s linear;
+  }
+
+  #name {
+    font-size: 30px;
+
+  }
+
+  #partone>h1+p {
+    font-size: 25px;
+
+  }
+
+  #partone>h1+p+p {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  article>h1>span {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+  }
+
+  #bgvalue {
+    font-size: 16px;
+    right: 10px;
+    position: absolute;
+    bottom: -10px;
+    background-color: white;
+    padding: 5px 10px;
+    margin: 30px 0px 20px 0px;
+    margin-right: 80px;
+
+  }
+
+  #full {
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 2px 5px;
+    color: rgb(0, 0, 0);
+  }
+
+  header>h2 {
+    font-size: 25px;
+  }
+  #dropdown{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    left: 0;
+  }
+  #hamburger{
+    z-index: 10;
+    gap: 9px;
+  }
+
+
+}
